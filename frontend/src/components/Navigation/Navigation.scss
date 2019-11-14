@@ -37,4 +37,13 @@
   .spacer {
     color: rgba(255, 255, 255, 0.3);
   }
+
+  a {
+    float: right;
+    font-size: 22px;
+    margin-top: 15px;
+  }
+  a:hover {
+    cursor: pointer;
+  }
 }

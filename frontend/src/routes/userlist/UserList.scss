@@ -8,6 +8,39 @@
   .container {
     margin: 0 auto;
     padding: 0 0 40px;
-    max-width: 380px;
+    max-width: 712px;
+  }
+  .nowrap {
+    white-space: nowrap;
+  }
+
+  a {
+    padding: 0 5px;
+  }
+
+  th {
+    background-color: white;
+  }
+
+  table, th, td {
+    margin: 0 40px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-bottom: 2px solid lightgray;
+    text-align: center;
+  }
+
+  svg {
+    color: gray;
+  }
+
+  svg:hover {
+    color: darkgray;
+    cursor: pointer;
+  }
+
+  tbody tr:hover > td {
+    color: lightskyblue;
   }
 }

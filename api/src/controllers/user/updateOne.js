@@ -12,14 +12,17 @@ import Problem from 'api-problem';
  * @return {void}
  */
 export default function(req, res, next) {
-  const id = req.params.id;
   const body = req.body;
+  const id = body.id;
   service
-      .updateOne(this.db, id, body)
-      .then((data) => {
+      .updateOne(id, body, {
+        db: this.db,
+        request: req,
+      })
+      .then((result) => {
         res.status(200).json({
           status: 'success',
-          data: data,
+          data: result,
         });
       })
       .catch((err) => {

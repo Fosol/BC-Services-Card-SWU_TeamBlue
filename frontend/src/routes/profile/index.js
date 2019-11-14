@@ -5,6 +5,7 @@ import Profile from './Profile';
 const title = 'Profile';
 
 function action() {
+  console.log("authstate");
   return {
     chunks: ['profile'],
     title,

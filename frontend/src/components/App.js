@@ -2,6 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import ApplicationContext from './ApplicationContext';
+import Keycloak from 'keycloak-js';
+import { KeycloakProvider } from 'react-keycloak';
+const keycloak = new Keycloak({
+  url: 'http://localhost:8180/auth',
+  realm: 'bcsc-swu',
+  clientId: 'team-blue-app'
+});
 
 const ContextType = {
   // Universal HTTP client
@@ -20,12 +27,12 @@ class App extends React.PureComponent {
   render() {
     const { context } = this.props;
 
-    // NOTE: If you need to add or modify header, footer etc. of the app,
-    // please do that inside the Layout component.
     return (
-      <ApplicationContext.Provider value={{ context }}>
-        {React.Children.only(this.props.children)}
-      </ApplicationContext.Provider>
+      <KeycloakProvider keycloak={keycloak}>
+        <ApplicationContext.Provider value={{ context }}>
+          {React.Children.only(this.props.children)}
+        </ApplicationContext.Provider>
+      </KeycloakProvider>
     );
   }
 }

@@ -17,21 +17,15 @@ export default function route(options) {
   const controller = new Controller(options.db);
 
   router.get('/find', controller.getMany);
-  router.get(
-      '/:id',
-      options.keycloak.protect('BCSC-SWU:administrator'),
-      controller.getOne,
-  );
-  router.put(
-      '/:id',
-      options.keycloak.protect('BCSC-SWU:adminitrator'),
-      controller.updateOne,
-  );
-  router.delete(
-      '/:id',
-      options.keycloak.protect('BCSC-SWU:adminitrator'),
-      controller.removeOne,
-  );
+  router.get('/:id',
+      options.keycloak.protect(`realm:administrator`),
+      controller.getOne);
+  router.put('/',
+      options.keycloak.protect(`realm:administrator`),
+      controller.updateOne);
+  router.delete('/:id',
+      options.keycloak.protect(`realm:administrator`),
+      controller.removeOne);
 
   return router;
 }

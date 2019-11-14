@@ -1,6 +1,7 @@
 import home from './home';
 import auth from './auth';
 import user from './user';
+import keycloak from './keycloak';
 
 /**
  * Provides a way to control routes to endpoints.
@@ -13,8 +14,12 @@ import user from './user';
  */
 export default function(options) {
   const app = options.app;
-  app.use(['/', '/api/'], home);
-  app.use(['/auth', '/api/auth'], auth(options));
-  app.use(['/user', '/api/user'], options.keycloak.protect(), user(options));
-  app.use(['/test', '/api/test'], user(options));
+  app.use(['/api', '/'], home);
+  app.use(['/api/auth', '/auth'], auth(options));
+  app.use(['/api/user', '/user'],
+      options.keycloak.protect('realm:contributor'),
+      user(options));
+  app.use(['/api/profile', '/profile'],
+      options.keycloak.protect(),
+      keycloak(options));
 }

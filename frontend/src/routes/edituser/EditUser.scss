@@ -3,17 +3,18 @@
   .root {
     padding-left: 20px;
     padding-right: 20px;
+    margin: 0 auto;
   }
 
   .container {
-    margin: 0 auto;
     padding: 0 0 40px;
-    max-width: 380px;
+    max-width: 712px;
   }
 
   form {
     font-family: ‘Noto Sans’, Verdana, Arial, sans-serif;
     font-size: 18px;
+    padding: 0 40px;
   }
 
   .button {

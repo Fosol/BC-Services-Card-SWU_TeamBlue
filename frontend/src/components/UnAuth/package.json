@@ -1,0 +1,6 @@
+{
+  "name": "UnAuth",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./UnAuth.js"
+}

@@ -12,14 +12,17 @@ import Problem from 'api-problem';
  */
 export default function(req, res, next) {
   const id = req.params.id;
-  const body = req.body;
   service
-      .removeOne(this.db, id, body)
-      .then((data) => {
-        if (data.rowCount) {
+      .removeOne(id,
+          {
+            db: this.db,
+            request: req,
+          })
+      .then((result) => {
+        if (result.rowCount) {
           res.status(200).json({
             status: 'success',
-            rows: data.rowCount,
+            rows: result.rowCount,
           });
         } else {
           next(

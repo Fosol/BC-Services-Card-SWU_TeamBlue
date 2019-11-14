@@ -11,11 +11,14 @@ import * as service from '../../services/user';
  */
 export default function(req, res, next) {
   service
-      .getMany(this.db, req.query)
-      .then((data) => {
+      .getMany({
+        db: this.db,
+        request: req,
+      })
+      .then((result) => {
         res.status(200).json({
           status: 'success',
-          data: data,
+          data: result,
         });
       })
       .catch((err) => {

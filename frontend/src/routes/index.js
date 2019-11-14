@@ -7,39 +7,27 @@ const routes = {
   children: [
     {
       path: '',
-      load: () => import(/* webpackChunkName: 'home' */ './home'),
-    },
-    {
-      path: '/home',
-      load: () => import(/* webpackChunkName: 'home' */ './home'),
-    },
-    {
-      path: '/login',
-      load: () => import(/* webpackChunkName: 'login' */ './login'),
-    },
-    {
-      path: '/register',
-      load: () => import(/* webpackChunkName: 'register' */ './register'),
+      load: () => import('./profile'),
     },
     {
       path: '/admin',
-      load: () => import(/* webpackChunkName: 'admin' */ './admin'),
+      load: () => import('./admin'),
     },
     {
       path: '/profile',
-      load: () => import(/* webpackChunkName: 'profile' */ './profile'),
+      load: () => import('./profile'),
     },
     {
       path: '/userlist',
-      load: () => import(/* webpackChunkName: 'profile' */ './userlist'),
+      load: () => import('./userlist'),
     },
     {
       path: '/edituser',
-      load: () => import(/* webpackChunkName: 'profile' */ './edituser'),
+      load: () => import('./edituser'),
     },
     {
       path: '/viewuser',
-      load: () => import(/* webpackChunkName: 'profile' */ './viewuser'),
+      load: () => import('./viewuser'),
     },
 
     // Wildcard routes, e.g. { path: '(.*)', ... } (must go last)

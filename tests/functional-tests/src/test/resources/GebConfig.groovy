@@ -89,7 +89,7 @@ baseNavigatorWaiting = true
 def env = System.getenv()
 baseUrl = env['BASEURL']
 if (!baseUrl) {
-	baseUrl = "http://gebish.org"
+	baseUrl = "http://localhost:3000"
 }
 
 println "BaseURL: ${baseUrl}"

@@ -1,0 +1,28 @@
+#3
+As a Contributer or an Admin, I want to view a paged list of registered users
+
+Given that I am an authenticated user (Contributer or Admin) And I am on the "Users List" page When I view the list of users that is more than 10 in length Then I can view the first 10 users along with a "See More" button And I can click on the "See More" button to view the next 10 users in the list
+
+Note: Each user in the list should include an email, role, and date registered for that user
+
+#4
+As an Admin, I want to view the details for a particular user
+
+Given that I am an authenticated Admin user When I am in the "Users List" Then I should be able to select a user And I am redirected to a "User Details" page And I can view the details for that user
+
+#5
+As an Admin, I want to edit the details for a particular user
+
+Given that I am an authenticated Admin user When I am in the "Users List" Then I can select a user for editing And I am redirected to a "Edit User Details" page And I can edit the details for that user and save my changes
+
+#6
+As an Admin, I want to delete a particular user profile from the system
+
+Given that I am an authenticated Admin user When I am in the "Users List" Then I can select a user for deletion And I am prompted for confirmation of deletion And the user profile for that user is deleted from the list when I select "OK"
+
+Note: Deleting a user should remove their entire profile and require that user to re-register prior to signing back in
+
+#7
+As a Contributor or an Admin, I want to log out
+
+Given that I am an authenticated Contributor or Admin user When I select the "Logout" button Then I will be logged out immediately And I will be redirected to the "Login" page

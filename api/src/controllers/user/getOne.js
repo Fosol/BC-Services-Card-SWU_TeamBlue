@@ -13,17 +13,20 @@ import * as service from '../../services/user';
 export default function(req, res, next) {
   const id = req.params.id;
   service
-      .getOne(this.db, id)
-      .then((data) => {
-        if (data != null) {
+      .getOne(id, {
+        db: this.db,
+        request: req,
+      })
+      .then((result) => {
+        if (result != null) {
           res.status(200).json({
             status: 'success',
-            data: data,
+            data: result,
           });
         } else {
           res.status(204).json({
             status: 'failure',
-            data: data,
+            data: result,
             message: `No data for ${id}`,
           });
         }

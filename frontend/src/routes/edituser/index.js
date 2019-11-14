@@ -4,7 +4,9 @@ import EditUser from './EditUser';
 
 const title = 'Edit User';
 
-function action() {
+function action(context, params) {
+  console.log("path params");
+  console.log(params);
   return {
     chunks: ['edituser'],
     title,

@@ -10,6 +10,7 @@ import history from './history';
 import { updateMeta } from './DOMUtils';
 import router from './router';
 import config from './config';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const context = {
   // Universal HTTP client

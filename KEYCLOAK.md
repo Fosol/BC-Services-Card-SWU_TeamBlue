@@ -3,7 +3,9 @@
 The development Keycloak container has been set up as follows:
 
 - REALM: `bcsc-swu`
-- CLIENT: `team-blue`, it is a public client.
+- CLIENT:
+    - `team-blue-app`: public client used by the frontend app.
+    - `team-blue-api`: confidential client used by the api.
 
 The instance is pre-populated with the following users:
 

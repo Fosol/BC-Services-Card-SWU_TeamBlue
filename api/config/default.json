@@ -12,13 +12,13 @@
     "realm": "bcsc-swu",
     "auth-server-url": "http://localhost:8180/auth",
     "ssl-required": "external",
-    "resource": "team-blue",
+    "resource": "team-blue-api",
     "verify-token-audience": true,
     "credentials": {
       "secret": "<USE ENV VAR>"
     },
-    "use-resource-role-mappings": true,
-    "confidential-port": 0
+    "confidential-port": 0,
+    "policy-enforcer": {}
   },
   "datasource": {
     "host": "localhost:54320"
