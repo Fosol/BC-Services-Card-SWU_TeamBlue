@@ -1,0 +1,52 @@
+@import '../../components/variables.css';
+
+.home {
+  .root {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 200px;
+  }
+
+  .container {
+    margin: 0 auto;
+    padding: 0 0 40px;
+    max-width: var(--max-content-width);
+    text-align: center;
+  }
+
+  .link {
+    display: inline-block;
+    padding: 3px 8px;
+    text-decoration: none;
+    font-size: 1.125em; /* ~18px */
+  }
+
+  .button {
+    margin: 0;
+    padding: 10px 16px;
+    outline: 0;
+    border: 1px solid #ffffff;
+    border-radius: 0;
+    background: #45319c;
+    color: whitesmoke;
+    text-align: center;
+    text-decoration: none;
+    font-size: 36px;
+    cursor: pointer;
+    height: 2.5em;
+    vertical-align: middle;
+  }
+
+  .spacer {
+    font-size: 24px;
+  }
+
+  .button:hover {
+    background: rgba(100, 100, 100, 0.8);
+  }
+
+  .button:focus {
+    border-color: #0074c2;
+    box-shadow: 0 0 8px rgba(0, 116, 194, 0.6);
+  }
+}

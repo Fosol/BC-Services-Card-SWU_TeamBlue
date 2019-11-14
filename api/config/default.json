@@ -1,0 +1,29 @@
+{
+  "express": {
+    "port": 5000
+  },
+  "logging": {
+    "loglevel": "info",
+    "morgan": {
+      "format": "tiny"
+    }
+  },
+  "keycloak": {
+    "realm": "bcsc-swu",
+    "auth-server-url": "http://localhost:8180/auth",
+    "ssl-required": "external",
+    "resource": "team-blue",
+    "verify-token-audience": true,
+    "credentials": {
+      "secret": "<USE ENV VAR>"
+    },
+    "use-resource-role-mappings": true,
+    "confidential-port": 0
+  },
+  "datasource": {
+    "host": "localhost:54320"
+  },
+  "connectionstrings": {
+    "demo": "<USE ENV VAR>"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "express": {
+    "port": "PORT"
+  },
+  "keycloak": {
+    "credentials": {
+      "secret": "KEYCLOAK_SECRET"
+    }
+  },
+  "connectionstrings": {
+    "demo": "POSTGRESQL_CONNECTION_STRING"
+  }
+}
